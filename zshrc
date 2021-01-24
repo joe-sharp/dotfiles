@@ -58,7 +58,6 @@ antigen bundle $HOME/.antigen/bundles/custom/joesharp
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zdharma/zsh-diff-so-fancy
 antigen theme custom/joesharp joe-style
-# antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 antigen apply
 export omg_ungit_prompt="%B%F{6}%~%f%b 🔮%B%F{8}❯%F{55}❯%F{6}❯%f%b "
 
