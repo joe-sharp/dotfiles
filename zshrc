@@ -80,7 +80,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 ### work ###
 [ -f ~/.config/workrc ] && source ~/.config/workrc
 
-##### Overide Antigen Plugin Aliases #####
+##### Override Antigen Plugin Aliases #####
 ### git ###
 alias gba="$HOME/bin/gba"
 alias gstd="$HOME/bin/gstd"
