@@ -1,0 +1,6 @@
+.cspell.json
+.eslintrc.json
+.htmlhintrc
+.markdown-lint.json
+.ruby-lint.yml
+report/*
