@@ -69,7 +69,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zdharma/zsh-diff-so-fancy
 antigen theme custom/joesharp joe-style
 antigen apply
-export omg_ungit_prompt="%B%F{6}%~%f%b 🔮%B%F{233}❯%F{55}❯%F{6}❯%f%b "
+export omg_ungit_prompt="%B%F{6}%~%f%b 🔮%B%F{233}❯%F{55}❯%F{27}❯%f%b "
 
 ### iTerm2 Shell Integrations ###
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
