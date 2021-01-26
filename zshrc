@@ -6,13 +6,20 @@ alias www='w3m'
 alias arst='asdf'
 alias v='vim'
 function colordiff () { diff -u $@ | diff-so-fancy }
+function httpcat() { RESPONSE=$@ && curl https://http.cat/$RESPONSE.jpg | imgcat }
 function rubo() { if [ -f Gemfile ]; then bundle exec rubocop $@; else rubocop $@; fi }
 function b() { if [ -f Gemfile ]; then bundle exec $@; else $@; fi }
 function super-lint() { FILE=$@ && docker run -e RUN_LOCAL=true -v $FILE:/tmp/lint/file github/super-linter }
 function super-lint-all() { DIR=$@ && docker run -e RUN_LOCAL=true -v $DIR:/tmp/lint github/super-linter }
-function httpcat() { RESPONSE=$@ && curl https://http.cat/$RESPONSE.jpg | imgcat }
                 # avoid loop          # force columns      # preserve color hack          # truncate output
 function cd() { builtin cd -P "$@" && COLUMNS=$(tput cols) script -q /dev/null ls -GaFC | head -n $(tput lines) }
+function mla()
+{
+  if [[ "$PWD" == *linter-configs ]]
+  then mega-linter-runner -e 'SHOW_ELAPSED_TIME=true'
+  else mega-linter-runner -e 'SHOW_ELAPSED_TIME=true' -e 'LINTER_RULES_PATH=https://raw.githubusercontent.com/joe-sharp/linter-configs/main'
+  fi
+}
 
 ### git and github ###
 alias gdst='git diff stash@{0}^ stash@{0}'
@@ -28,6 +35,8 @@ alias ghw='gh pr view --web'
 alias ghl='gh pr list -l core-frameworks'
 alias ghc='gh pr checks'
 alias ghd='gh pr diff'
+alias ghm='gh pr merge && gl'
+alias ghs='gh pr status'
 function gppr() { if [ -f bin/gppr ]; then bin/gppr; else gh pr create -a joe-sharp; fi }
 
 ##### Applications #####
@@ -86,6 +95,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias gba="$HOME/bin/gba"
 alias gstd="$HOME/bin/gstd"
 alias gp="git push -u origin HEAD"
+alias gcm='git checkout main || (echo This repository is still not using \"main\"! && git checkout master)'
 
 ##### MOTD #####
 if [ "$(w -h | grep "^$(whoami) *s[^ ]* *-"|wc -l)" -eq "1" ]; then /usr/local/bin/neofetch; fi
