@@ -36,6 +36,7 @@ alias ghl='gh pr list -l core-frameworks'
 alias ghc='gh pr checks'
 alias ghd='gh pr diff'
 alias ghm='gh pr merge && gl'
+alias ghs='gh pr status'
 function gppr() { if [ -f bin/gppr ]; then bin/gppr; else gh pr create -a joe-sharp; fi }
 
 ##### Applications #####
