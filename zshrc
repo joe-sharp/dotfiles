@@ -35,6 +35,7 @@ alias ghw='gh pr view --web'
 alias ghl='gh pr list -l core-frameworks'
 alias ghc='gh pr checks'
 alias ghd='gh pr diff'
+alias ghm='gh pr merge && gl'
 function gppr() { if [ -f bin/gppr ]; then bin/gppr; else gh pr create -a joe-sharp; fi }
 
 ##### Applications #####
@@ -93,6 +94,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias gba="$HOME/bin/gba"
 alias gstd="$HOME/bin/gstd"
 alias gp="git push -u origin HEAD"
+alias gcm='git checkout main || (echo This repository is still not using \"main\"! && git checkout master)'
 
 ##### MOTD #####
 if [ "$(w -h | grep "^$(whoami) *s[^ ]* *-"|wc -l)" -eq "1" ]; then /usr/local/bin/neofetch; fi
