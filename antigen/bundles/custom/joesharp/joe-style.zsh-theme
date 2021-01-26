@@ -1,6 +1,6 @@
 : ${omg_ungit_prompt:=$PS1}
 #: ${omg_second_line:="%~ • "}
-: ${omg_second_line:="%B%F{6}%~%f%b 🔮%B%F{8}❯%F{55}❯%F{6}❯%f%b "}
+: ${omg_second_line:="%B%F{6}%~%f%b 🔮%B%F{233}❯%F{55}❯%F{6}❯%f%b "}
 : ${omg_is_a_git_repo_symbol:=''}
 : ${omg_has_untracked_files_symbol:=''}        #                ?    
 : ${omg_has_adds_symbol:=''}
@@ -65,17 +65,13 @@ function custom_build_prompt {
     local original_prompt=$PS1
 
 
-    local black_on_white="%K{255}%F{black}"
-    local yellow_on_white="%K{255}%F{yellow}"
-    local red_on_white="%K{255}%F{red}"
-    #local red_on_black="%K{black}%F{red}"
-    local red_on_black="%K{black}%F{cyan}"
-    #local black_on_red="%K{red}%F{black}"
-    #local white_on_red="%K{red}%F{white}"
-    #local yellow_on_red="%K{red}%F{yellow}"
-    local black_on_red="%K{240}%F{cyan}"
-    local white_on_red="%K{240}%F{255}"
-    local yellow_on_red="%K{240}%F{yellow}"
+    local black_on_white="%K{55}%F{white}"
+    local yellow_on_white="%K{55}%F{yellow}"
+    local red_on_white="%K{55}%F{red}"
+    local red_on_black="%K{black}%F{red}"
+    local black_on_red="%K{233}%F{cyan}"
+    local white_on_red="%K{233}%F{white}"
+    local yellow_on_red="%K{233}%F{yellow}"
 
     # Flags
     local omg_default_color_on="${black_on_white}"
@@ -105,7 +101,7 @@ function custom_build_prompt {
 
         # where
 
-        prompt="${prompt} %K{240}%F{255} ${black_on_red}"
+        prompt="${prompt} %K{233}%F{55} ${black_on_red}"
         if [[ $detached == true ]]; then
             prompt+=$(enrich_append $detached $omg_detached_symbol "${white_on_red}")
             prompt+=$(enrich_append $detached "(${current_commit_hash:0:7})" "${black_on_red}")
@@ -137,7 +133,7 @@ function custom_build_prompt {
             fi
         fi
         prompt+=$(enrich_append ${is_on_a_tag} "${omg_is_on_a_tag_symbol} ${tag_at_current_commit}" "${black_on_red}")
-        prompt+="%k%F{240}%f
+        prompt+="%k%F{233}%f
 ${omg_second_line}"
     else
         prompt="${omg_ungit_prompt}"
