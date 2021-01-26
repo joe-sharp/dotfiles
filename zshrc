@@ -13,6 +13,13 @@ function super-lint() { FILE=$@ && docker run -e RUN_LOCAL=true -v $FILE:/tmp/li
 function super-lint-all() { DIR=$@ && docker run -e RUN_LOCAL=true -v $DIR:/tmp/lint github/super-linter }
                 # avoid loop          # force columns      # preserve color hack          # truncate output
 function cd() { builtin cd -P "$@" && COLUMNS=$(tput cols) script -q /dev/null ls -GaFC | head -n $(tput lines) }
+function mla()
+{
+  if [[ "$PWD" == *linter-configs ]]
+  then mega-linter-runner -e 'SHOW_ELAPSED_TIME=true'
+  else mega-linter-runner -e 'SHOW_ELAPSED_TIME=true' -e 'LINTER_RULES_PATH=https://raw.githubusercontent.com/joe-sharp/linter-configs/main'
+  fi
+}
 
 ### git and github ###
 alias gdst='git diff stash@{0}^ stash@{0}'
