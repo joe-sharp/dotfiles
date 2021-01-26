@@ -5,6 +5,7 @@ alias w3m='w3m -sixel'
 alias www='w3m'
 alias arst='asdf'
 alias v='vim'
+function colordiff () { diff -u $@ | diff-so-fancy }
 function rubo() { if [ -f Gemfile ]; then bundle exec rubocop $@; else rubocop $@; fi }
 function b() { if [ -f Gemfile ]; then bundle exec $@; else $@; fi }
 function super-lint() { FILE=$@ && docker run -e RUN_LOCAL=true -v $FILE:/tmp/lint/file github/super-linter }
