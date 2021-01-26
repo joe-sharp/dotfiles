@@ -65,11 +65,11 @@ function custom_build_prompt {
     local original_prompt=$PS1
 
 
-    local black_on_white="%K{55}%F{white}"
+    local black_on_white="%K{55}%F{cyan}"
     local yellow_on_white="%K{55}%F{yellow}"
     local red_on_white="%K{55}%F{red}"
     local red_on_black="%K{black}%F{red}"
-    local black_on_red="%K{233}%F{cyan}"
+    local black_on_red="%K{233}%F{27}"
     local white_on_red="%K{233}%F{white}"
     local yellow_on_red="%K{233}%F{yellow}"
 
