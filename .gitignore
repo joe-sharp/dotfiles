@@ -4,3 +4,6 @@
 .markdown-lint.json
 .ruby-lint.yml
 report/*
+
+plug.vim
+vim/plugged/*
