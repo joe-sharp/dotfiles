@@ -29,6 +29,15 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x2e-0x100000-0x2f</key>
+		<dict>
+			<key>Action</key>
+			<integer>10</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>.</string>
+		</dict>
 		<key>0x57-0x1e0000</key>
 		<dict>
 			<key>Action</key>
