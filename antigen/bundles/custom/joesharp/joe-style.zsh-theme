@@ -100,7 +100,7 @@ function custom_build_prompt {
 
         # where
 
-        prompt="${prompt} %K{233}%F{55} ${black_on_red}"
+        prompt="${prompt} %K{233}%F{55} ${black_on_red}"
         if [[ $detached == true ]]; then
             prompt+=$(enrich_append $detached $omg_detached_symbol "${white_on_red}")
             prompt+=$(enrich_append $detached "(${current_commit_hash:0:7})" "${black_on_red}")
@@ -132,7 +132,7 @@ function custom_build_prompt {
             fi
         fi
         prompt+=$(enrich_append ${is_on_a_tag} "${omg_is_on_a_tag_symbol} ${tag_at_current_commit}" "${black_on_red}")
-        prompt+="%k%F{233}%f
+        prompt+="%k%F{233}%f
 ${omg_second_line}"
     else
         prompt="${omg_ungit_prompt}"
