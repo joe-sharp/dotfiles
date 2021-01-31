@@ -35,7 +35,6 @@ jobs:
         with:
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
           fetch-depth: 0
-          submodules: true
 
       # Mega-Linter
       - name: Mega-Linter
@@ -46,10 +45,7 @@ jobs:
           # https://nvuillam.github.io/mega-linter/configuration/
           VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }} # Validates all source when push on main, else just the git diff with main. Override with true if you always want to lint all sources
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEFAULT_BRANCH: main
-          # ADD YOUR CUSTOM ENV VARIABLES HERE OR DEFINE THEM IN A FILE .mega-linter.yml AT THE ROOT OF YOUR REPOSITORY
-          # DISABLE: COPYPASTE,SPELL # Uncomment to disable copy-paste and spell checks
-          LINTER_RULES_PATH: https://raw.githubusercontent.com/joe-sharp/linter-configs/main
+          MEGALINTER_CONFIG: https://raw.githubusercontent.com/joe-sharp/linter-configs/main/.mega-linter.yml
 
       # Upload Mega-Linter artifacts
       - name: Archive production artifacts
@@ -87,4 +83,3 @@ jobs:
         with:
           branch: ${{ github.event.pull_request.head.ref || github.head_ref || github.ref }}
           commit_message: "[Mega-Linter] Apply linters fixes"
-
