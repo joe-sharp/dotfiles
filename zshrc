@@ -16,8 +16,8 @@ function cd() { builtin cd -P "$@" && COLUMNS=$(tput cols) script -q /dev/null l
 function mla()
 {
   if [[ "$PWD" == *linter-configs ]]
-  then mega-linter-runner -e 'SHOW_ELAPSED_TIME=true'
-  else mega-linter-runner -e 'SHOW_ELAPSED_TIME=true' -e 'LINTER_RULES_PATH=https://raw.githubusercontent.com/joe-sharp/linter-configs/main'
+  then mega-linter-runner
+  else mega-linter-runner -e 'MEGALINTER_CONFIG=https://raw.githubusercontent.com/joe-sharp/linter-configs/main/.mega-linter.yml'
   fi
 }
 
