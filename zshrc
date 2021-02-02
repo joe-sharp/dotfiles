@@ -54,6 +54,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
 ### antigen (ZSH Plugin Manager) ###
+ANTIGEN_CACHE=$HOME/.antigen/init-0${TERM_PROGRAM}.zsh
 source "/usr/local/bin/antigen.zsh"
 antigen use oh-my-zsh
 antigen bundle arialdomartini/oh-my-git
@@ -64,16 +65,16 @@ antigen bundle colored-man-pages
 antigen bundle command-not-found
 antigen bundle man
 antigen bundle MichaelAquilina/zsh-you-should-use
-antigen bundle $HOME/.antigen/bundles/custom/joesharp
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zdharma/zsh-diff-so-fancy
 if (( ${+TERM_PROGRAM} ));
 then
-  antigen theme custom/joesharp joe-style
+  antigen theme https://gist.github.com/5b0c67179aa076ff53e7c03c4191eec3 joe-style
+  export omg_ungit_prompt="%B%F{6}%~%f%b 🔮%B%F{233}❯%F{55}❯%F{27}❯%f%b "
 else
-  antigen theme custom/joesharp remote-style
+  antigen theme https://gist.github.com/5b0c67179aa076ff53e7c03c4191eec3 remote-style
+  export omg_ungit_prompt="%B%F{6}%~%f%b 🔮%B%F{cyan}❯%F{55}❯%F{27}❯%f%b "
 fi
-export omg_ungit_prompt="%B%F{6}%~%f%b 🔮%B%F{233}❯%F{55}❯%F{27}❯%f%b "
 antigen apply
 
 ### iTerm2 Shell Integrations ###
