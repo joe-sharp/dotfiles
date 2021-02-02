@@ -16,18 +16,6 @@ nnoremap <C-n><C-f> :NERDTreeFind<CR>
 autocmd Filetype markdown setlocal complete+=kspell textwidth=120 " Automatic wrapping
 autocmd Filetype gitcommit setlocal complete+=kspell textwidth=72 " Automatic git commit wrapping
 
-" syntax highlighting
-syntax on
-colo allhallowseve
-" clear bg
-hi Normal      ctermbg=NONE guibg=NONE
-hi EndOfBuffer ctermbg=NONE guibg=NONE
-" better diff
-hi diffAdded   ctermbg=NONE ctermfg=46  cterm=NONE guibg=NONE guifg=#00FF00 gui=NONE
-hi diffRemoved ctermbg=NONE ctermfg=196 cterm=NONE guibg=NONE guifg=#FF0000 gui=NONE
-hi link diffLine String
-hi link diffSubname Normal
-
 " plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -40,9 +28,24 @@ Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'bryanmylee/vim-colorscheme-icons'
+Plug 'christophermca/meta5'
 call plug#end()
+
+let g:instant_markdown_autostart = 0
 
 " nerdtree
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
   \ quit | endif
+
+" syntax highlighting
+syntax on
+colo meta5
+" clear bg
+hi Normal      ctermbg=NONE guibg=NONE
+hi EndOfBuffer ctermbg=NONE guibg=NONE
+" better diff
+hi diffAdded   ctermbg=NONE ctermfg=46  cterm=NONE guibg=NONE guifg=#00FF00 gui=NONE
+hi diffRemoved ctermbg=NONE ctermfg=196 cterm=NONE guibg=NONE guifg=#FF0000 gui=NONE
+hi link diffLine String
+hi link diffSubname Normal
