@@ -31,6 +31,8 @@ Plug 'bryanmylee/vim-colorscheme-icons'
 Plug 'christophermca/meta5'
 call plug#end()
 
+let g:instant_markdown_autostart = 0
+
 " nerdtree
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
