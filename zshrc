@@ -39,6 +39,10 @@ alias ghm='gh pr merge && gl'
 alias ghs='gh pr status'
 function gppr() { if [ -f bin/gppr ]; then bin/gppr; else gh pr create -a joe-sharp; fi }
 
+### Docker ###
+alias drm='docker rm'
+alias drma="docker rm $(docker ps -q -f status=exited)"
+
 ##### Applications #####
 ### RBENV ###
 eval "$(rbenv init -)"
