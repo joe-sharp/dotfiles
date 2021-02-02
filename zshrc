@@ -70,10 +70,11 @@ antigen bundle zdharma/zsh-diff-so-fancy
 if (( ${+TERM_PROGRAM} ));
 then
   antigen theme custom/joesharp joe-style
+  export omg_ungit_prompt="%B%F{6}%~%f%b 🔮%B%F{233}❯%F{55}❯%F{27}❯%f%b "
 else
   antigen theme custom/joesharp remote-style
+  export omg_ungit_prompt="%B%F{6}%~%f%b 🔮%B%F{cyan}❯%F{55}❯%F{27}❯%f%b "
 fi
-export omg_ungit_prompt="%B%F{6}%~%f%b 🔮%B%F{233}❯%F{55}❯%F{27}❯%f%b "
 antigen apply
 
 ### iTerm2 Shell Integrations ###
