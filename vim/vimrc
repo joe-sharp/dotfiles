@@ -49,3 +49,6 @@ hi diffAdded   ctermbg=NONE ctermfg=46  cterm=NONE guibg=NONE guifg=#00FF00 gui=
 hi diffRemoved ctermbg=NONE ctermfg=196 cterm=NONE guibg=NONE guifg=#FF0000 gui=NONE
 hi link diffLine String
 hi link diffSubname Normal
+" nerdtree
+autocmd filetype nerdtree highlight ruby_icon ctermbg=none ctermfg=196 guifg=#ffa500
+autocmd filetype nerdtree syn match ruby_icon ## containedin=Identifier
