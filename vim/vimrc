@@ -31,7 +31,9 @@ Plug 'bryanmylee/vim-colorscheme-icons'
 Plug 'christophermca/meta5'
 call plug#end()
 
+" markdown preview
 let g:instant_markdown_autostart = 0
+let vim_markdown_preview_github=1
 
 " nerdtree
 " Exit Vim if NERDTree is the only window left.
