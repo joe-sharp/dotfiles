@@ -1,0 +1,15 @@
+[user]
+	name = joe-sharp
+	email = joesharp13@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	pager = diff-so-fancy | less -FXRi
+	excludesFile = /Users/joesharp/.gitignore
+	editor = /usr/bin/vim
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[alias]
+	why = blame
+	unstage = reset HEAD --
