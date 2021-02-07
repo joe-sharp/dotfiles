@@ -1,0 +1,12 @@
+*.env
+*.envbak
+*.idea
+*.sublime-*
+rspec_n_iteration.*
+rspec_n-*
+.swp
+# Mac OS
+*.DS_Store
+.AppleDouble
+.LSOverride
+
