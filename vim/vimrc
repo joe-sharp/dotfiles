@@ -1,7 +1,11 @@
-set expandtab
 set hlsearch
 set incsearch
 set encoding=utf8
+""" tab settings
+set tabstop=2 " TAB width
+set shiftwidth=2 " Indent width
+set softtabstop=2 " Number of columns for TAB?
+set expandtab " Convert tab to spaces
 
 """ custom shortcuts
 let mapleader = " "
