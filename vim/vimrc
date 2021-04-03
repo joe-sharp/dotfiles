@@ -21,6 +21,10 @@ nnoremap <C-n><C-t> :NERDTreeToggle<CR>
 nnoremap <C-n><C-f> :NERDTreeFind<CR>
 
 """ autocmds
+" Spell-check Markdown files and Git Commit Messages
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
+" Enable dictionary auto-completion in Markdown files and Git Commit Messages
 autocmd Filetype markdown setlocal complete+=kspell textwidth=120 " Automatic wrapping
 autocmd Filetype gitcommit setlocal complete+=kspell textwidth=72 " Automatic git commit wrapping
 
