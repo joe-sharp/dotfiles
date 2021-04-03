@@ -9,10 +9,14 @@ set expandtab " Convert tab to spaces
 
 """ custom shortcuts
 let mapleader = " "
+" Toggle line numbers and relative numbering
 nmap <silent> <leader>n :set nu! rnu!<CR>
+" Toggle relative numbering (assuming line numbers are on)
 nmap <silent> <leader>r :set rnu!<CR>
+" save and quit
 nmap <silent> <leader>s :w<CR>
 nmap <silent> <leader>q :q<CR>
+" NERDTree
 nnoremap <C-n><C-t> :NERDTreeToggle<CR>
 nnoremap <C-n><C-f> :NERDTreeFind<CR>
 
