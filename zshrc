@@ -42,9 +42,6 @@ alias drm='docker rm'
 alias drma="docker rm $(docker ps -q -f status=exited)"
 
 ##### Applications #####
-### RBENV ###
-eval "$(rbenv init -)"
-
 ### The Fuck?! ###
 eval $(thefuck --alias)
 eval $(thefuck --alias FUCK)
