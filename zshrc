@@ -5,7 +5,7 @@ alias w3m='w3m -sixel'
 alias www='w3m'
 alias arst='asdf'
 function colordiff () { diff -u $@ | diff-so-fancy }
-function httpcat() { RESPONSE=$@ && curl https://http.cat/$RESPONSE.jpg | imgcat }
+function httpcat() { INPUT=$@ && curl https://http.cat/$INPUT.jpg | imgcat }
 function rubo() { if [ -f Gemfile ]; then bundle exec rubocop $@; else rubocop $@; fi }
 function b() { if [ -f Gemfile ]; then bundle exec $@; else $@; fi }
                 # avoid loop          # force columns      # preserve color hack          # truncate output
@@ -22,7 +22,7 @@ function mla()
 alias gdst='git diff stash@{0}^ stash@{0}'
 alias gai='git add -p'
 alias gbc='git branch-cleanup'
-alias gpim='git pull && git pull origin master'
+alias gpim='git pull && git pull --no-rebase origin master'
 alias gurd='git update-ref -d'
 alias gpn='git push --no-verify'
 alias gcob='git checkout -b'
@@ -102,7 +102,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias gba="$HOME/bin/gba"
 alias gstd="$HOME/bin/gstd"
 alias gp="git push -u origin HEAD"
-alias gcm='git checkout main || (echo This repository is still not using \"main\"! && git checkout master)'
+alias gcm='git checkout main || (print $fg_bold[red]This repository is still not using \"main\"!$reset_color && git checkout master)'
 
 ##### MOTD #####
 if [ "$(w -h | grep "^$(whoami) *s[^ ]* *-"|wc -l)" -eq "1" ]; then /usr/local/bin/neofetch; fi
