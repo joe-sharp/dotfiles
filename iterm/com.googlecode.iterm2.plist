@@ -5373,9 +5373,9 @@ Arrange Split Panes Evenly</string>
 		</dict>
 	</array>
 	<key>OpenArrangementAtStartup</key>
-	<true/>
-	<key>OpenNoWindowsAtStartup</key>
 	<false/>
+	<key>OpenNoWindowsAtStartup</key>
+	<true/>
 	<key>PerPaneBackgroundImage</key>
 	<false/>
 	<key>PointerActions</key>
@@ -5390,13 +5390,19 @@ Arrange Split Panes Evenly</string>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<false/>
+	<key>RequireCmdForDraggingText</key>
+	<true/>
 	<key>Selection Respects Soft Boundaries</key>
 	<true/>
 	<key>SetCookie</key>
 	<true/>
+	<key>ShowFullScreenTabBar</key>
+	<false/>
 	<key>Snippets</key>
 	<array>
 		<dict>
+			<key>guid</key>
+			<string>e6a2008ecdab8c62d39dbae667f11dc6854a7f470d19855606e6018a845edb89</string>
 			<key>title</key>
 			<string>Rails Views</string>
 			<key>value</key>
