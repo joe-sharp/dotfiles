@@ -26,6 +26,8 @@ alias gpim='git pull && git pull --no-rebase origin master'
 alias gurd='git update-ref -d'
 alias gpn='git push --no-verify'
 alias gcob='git checkout -b'
+alias gs='git status'
+alias gsc="$HOME/bin/gsc"
 alias gh='GITHUB_TOKEN=$(/usr/bin/sudo cat ~/.secrets/gh) gh'
 alias ghv='gh pr view'
 alias ghw='gh pr view --web'
