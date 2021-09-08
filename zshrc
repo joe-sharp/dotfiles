@@ -4,13 +4,10 @@ alias lll='exa -lhgH'
 alias w3m='w3m -sixel'
 alias www='w3m'
 alias arst='asdf'
-alias v='vim'
 function colordiff () { diff -u $@ | diff-so-fancy }
 function httpcat() { RESPONSE=$@ && curl https://http.cat/$RESPONSE.jpg | imgcat }
 function rubo() { if [ -f Gemfile ]; then bundle exec rubocop $@; else rubocop $@; fi }
 function b() { if [ -f Gemfile ]; then bundle exec $@; else $@; fi }
-function super-lint() { FILE=$@ && docker run -e RUN_LOCAL=true -v $FILE:/tmp/lint/file github/super-linter }
-function super-lint-all() { DIR=$@ && docker run -e RUN_LOCAL=true -v $DIR:/tmp/lint github/super-linter }
                 # avoid loop          # force columns      # preserve color hack          # truncate output
 function cd() { builtin cd -P "$@" && COLUMNS=$(tput cols) script -q /dev/null ls -GaFC | head -n $(tput lines) }
 function mla()
