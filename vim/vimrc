@@ -46,6 +46,7 @@ Plug 'inkarkat/vim-ShowTrailingWhitespace'
 Plug 'inkarkat/vim-DeleteTrailingWhitespace'
 call plug#end()
 " markdown preview
+" manually trigger preview via the command :InstantMarkdownPreview and stop it via :InstantMarkdownStop
 let g:instant_markdown_autostart = 0
 let vim_markdown_preview_github=1
 " nerdtree
