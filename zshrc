@@ -31,7 +31,6 @@ alias gsc="$HOME/bin/gsc"
 alias gh='GITHUB_TOKEN=$(/usr/bin/sudo cat ~/.secrets/gh) gh'
 alias ghv='gh pr view'
 alias ghw='gh pr view --web'
-alias ghl='gh pr list -l core-frameworks'
 alias ghc='gh pr checks'
 alias ghd='gh pr diff'
 alias ghm='gh pr merge && gl'
