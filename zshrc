@@ -41,6 +41,10 @@ function gppr() { if [ -f bin/gppr ]; then bin/gppr; else gh pr create -a joe-sh
 alias drm='docker rm'
 alias drma="docker rm $(docker ps -q -f status=exited)"
 
+### Minitest ###
+alias etest='ruby -r minitest/pride *_test.rb'
+alias ewatch='watch -n 5 ruby *_test.rb'
+
 ##### Applications #####
 ### The Fuck?! ###
 eval $(thefuck --alias)
