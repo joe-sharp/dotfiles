@@ -4,6 +4,7 @@ alias lll='exa -lhgH'
 alias w3m='w3m -sixel'
 alias www='w3m'
 alias arst='asdf'
+alias bench='/usr/bin/time -l'
 function colordiff () { diff -u $@ | diff-so-fancy }
 function httpcat() { INPUT=$@ && curl https://http.cat/$INPUT.jpg | imgcat }
 function rubo() { if [ -f Gemfile ]; then bundle exec rubocop $@; else rubocop $@; fi }
@@ -18,7 +19,7 @@ function mla()
   fi
 }
 
-### git and github ###
+### git and GitHub ###
 alias gdst='git diff stash@{0}^ stash@{0}'
 alias gai='git add -p'
 alias gbc='git branch-cleanup'
@@ -41,9 +42,8 @@ function gppr() { if [ -f bin/gppr ]; then bin/gppr; else gh pr create -a joe-sh
 alias drm='docker rm'
 alias drma="docker rm $(docker ps -q -f status=exited)"
 
-### Minitest ###
-alias etest='ruby -r minitest/pride *_test.rb'
-alias ewatch='watch -n 5 ruby *_test.rb'
+### Exercism ###
+function etest() { if [ -f package.json ]; then yarn test; else ruby *_test.rb -c; fi }
 
 ##### Applications #####
 ### The Fuck?! ###
