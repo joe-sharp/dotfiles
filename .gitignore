@@ -8,3 +8,4 @@ report/*
 
 plug.vim
 vim/plugged/*
+.netrwhist
