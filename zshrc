@@ -43,6 +43,7 @@ alias drm='docker rm'
 alias drma="docker rm $(docker ps -q -f status=exited)"
 
 ### Exercism ###
+alias e='exercism'
 function etest() { if [ -f package.json ]; then yarn test; else ruby *_test.rb -c; fi }
 
 ##### Applications #####
