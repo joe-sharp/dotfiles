@@ -5411,6 +5411,14 @@ include Rails.application.routes.url_helpers # for named paths
 include ActionView::Helpers::UrlHelper       # for url_for
 </string>
 		</dict>
+		<dict>
+			<key>guid</key>
+			<string>2DBB15CF-8937-4846-AAB9-89E4BC47C6DD</string>
+			<key>title</key>
+			<string>Pry</string>
+			<key>value</key>
+			<string>require 'pry'; binding.pry</string>
+		</dict>
 	</array>
 	<key>SoundForEsc</key>
 	<false/>
