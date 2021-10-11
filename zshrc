@@ -86,8 +86,8 @@ antigen apply
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 ### ASDF ###
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+. /usr/local/opt/asdf/libexec/asdf.sh
+autoload -Uz compinit && compinit
 
 ### FZF ###
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
