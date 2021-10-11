@@ -590,6 +590,15 @@
 			<key>Text</key>
 			<string>.</string>
 		</dict>
+		<key>0x54-0x120000-0x11</key>
+		<dict>
+			<key>Action</key>
+			<integer>61</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0x57-0x1e0000</key>
 		<dict>
 			<key>Action</key>
@@ -5397,7 +5406,7 @@ Arrange Split Panes Evenly</string>
 	<key>SetCookie</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>Snippets</key>
 	<array>
 		<dict>
