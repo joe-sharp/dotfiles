@@ -68,6 +68,7 @@ antigen bundle thefuck
 antigen bundle colored-man-pages
 antigen bundle command-not-found
 antigen bundle man
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle MichaelAquilina/zsh-you-should-use
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zdharma/zsh-diff-so-fancy
@@ -85,8 +86,8 @@ antigen apply
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 ### ASDF ###
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+. /usr/local/opt/asdf/libexec/asdf.sh
+autoload -Uz compinit && compinit
 
 ### FZF ###
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
