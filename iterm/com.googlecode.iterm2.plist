@@ -613,6 +613,17 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0xd-0x100000-0x24</key>
+		<dict>
+			<key>Action</key>
+			<integer>23</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
 		<key>0xf700-0x280000-0x7e</key>
 		<dict>
 			<key>Action</key>
