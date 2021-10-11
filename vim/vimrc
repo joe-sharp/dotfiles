@@ -19,6 +19,10 @@ nmap <silent> <leader>q :q<CR>
 " NERDTree
 nnoremap <C-n><C-t> :NERDTreeToggle<CR>
 nnoremap <C-n><C-f> :NERDTreeFind<CR>
+" vim-infer-debugger
+nmap <Leader>P :call AddDebugger("O")<cr>
+nmap <Leader>p :call AddDebugger("o")<cr>
+nmap <Leader>d :call RemoveAllDebuggers()<cr>
 
 """ autocmds
 " Spell-check Markdown files and Git Commit Messages
@@ -44,6 +48,7 @@ Plug 'christophermca/meta5'
 Plug 'inkarkat/vim-ingo-library'
 Plug 'inkarkat/vim-ShowTrailingWhitespace'
 Plug 'inkarkat/vim-DeleteTrailingWhitespace'
+Plug 'mcasper/vim-infer-debugger'
 call plug#end()
 " markdown preview
 " manually trigger preview via the command :InstantMarkdownPreview and stop it via :InstantMarkdownStop
