@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 puts 'Loading ~/.pryrc ...'
+require 'pry-doc'
 
 # include Rails Route/Views helpers
 def iv
