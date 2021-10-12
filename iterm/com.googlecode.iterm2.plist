@@ -613,6 +613,17 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0xd-0x100000-0x24</key>
+		<dict>
+			<key>Action</key>
+			<integer>23</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
 		<key>0xf700-0x280000-0x7e</key>
 		<dict>
 			<key>Action</key>
@@ -5408,27 +5419,7 @@ Arrange Split Panes Evenly</string>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>Snippets</key>
-	<array>
-		<dict>
-			<key>guid</key>
-			<string>e6a2008ecdab8c62d39dbae667f11dc6854a7f470d19855606e6018a845edb89</string>
-			<key>title</key>
-			<string>Rails Views</string>
-			<key>value</key>
-			<string>include ActionDispatch::Routing              # for named paths
-include Rails.application.routes.url_helpers # for named paths
-include ActionView::Helpers::UrlHelper       # for url_for
-</string>
-		</dict>
-		<dict>
-			<key>guid</key>
-			<string>2DBB15CF-8937-4846-AAB9-89E4BC47C6DD</string>
-			<key>title</key>
-			<string>Pry</string>
-			<key>value</key>
-			<string>require 'pry'; binding.pry</string>
-		</dict>
-	</array>
+	<array/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>

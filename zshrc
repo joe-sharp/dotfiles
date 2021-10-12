@@ -69,6 +69,7 @@ antigen bundle colored-man-pages
 antigen bundle command-not-found
 antigen bundle man
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle olets/zsh-abbr
 antigen bundle MichaelAquilina/zsh-you-should-use
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zdharma/zsh-diff-so-fancy
