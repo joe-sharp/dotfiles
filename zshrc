@@ -72,7 +72,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle olets/zsh-abbr
 antigen bundle MichaelAquilina/zsh-you-should-use
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zdharma/zsh-diff-so-fancy
+antigen bundle zdharma-continuum/zsh-diff-so-fancy
 if (( ${+TERM_PROGRAM} ));
 then
   antigen theme https://gist.github.com/5b0c67179aa076ff53e7c03c4191eec3 joe-style
