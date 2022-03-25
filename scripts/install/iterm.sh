@@ -2,7 +2,7 @@
 
 if [[ ! $OSTYPE == "darwin"* ]]; then
   echo 'Not installing iTerm2 since it is Mac only...'
-elif $(ls /Applications/iTerm.app &> /dev/null); then
+elif eval "$(ls /Applications/iTerm.app &> /dev/null)"; then
   echo 'Not installing iTerm2 since it is already installed...'
 else
   echo 'Installing iTerm2...'

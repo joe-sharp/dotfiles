@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if $(defaults read com.googlecode.iterm2.plist PrefsCustomFolder &> /dev/null); then
+if eval "$(defaults read com.googlecode.iterm2.plist PrefsCustomFolder &> /dev/null)"; then
   echo 'iTerm2 appears to already be configured...'
 else
   echo 'Configuring iTerm2...'

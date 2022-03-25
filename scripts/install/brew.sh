@@ -10,7 +10,7 @@ function brew_install {
 if [[ ! $OSTYPE == "darwin"* ]]; then
   echo 'Not installing anything via brew since it is Mac only...'
   exit 0
-elif $(which brew &> /dev/null); then
+elif eval "$(which brew &> /dev/null)"; then
   echo 'Not installing brew since it is already installed...'
 else
   echo 'Installing brew...'

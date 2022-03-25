@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if $(ls /usr/local/bin/antigen.zsh &> /dev/null); then
+if eval "$(ls /usr/local/bin/antigen.zsh &> /dev/null)"; then
   echo 'Not installing antigen since it is already installed...'
 else
   echo 'Installing antigen...'
