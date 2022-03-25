@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source 'scripts/install/is_installed.sh'
+source 'scripts/lib/is_installed.sh'
 
 function brew_install {
   if ! is_installed "${2:-$1}" ; then
