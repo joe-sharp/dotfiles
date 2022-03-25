@@ -5,6 +5,8 @@
 .jscpd.json
 .markdown-lint.json
 .ruby-lint.yml
+.rubocop.yml
+.yamllint.yml
 report/*
 
 plug.vim
