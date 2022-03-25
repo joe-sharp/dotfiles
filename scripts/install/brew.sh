@@ -23,5 +23,6 @@ brew_install exercism
 brew_install gh
 brew_install neofetch
 brew_install ripgrep rg
+brew_install shfmt
 brew_install thefuck
 brew_install yamllint
