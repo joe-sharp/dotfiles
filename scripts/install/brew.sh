@@ -2,7 +2,7 @@
 source 'scripts/lib/is_installed.sh'
 
 function brew_install {
-  if ! is_installed "${2:-$1}" ; then
+  if ! is_installed "${2:-$1}"; then
     brew install "$1"
   fi
 }
