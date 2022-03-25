@@ -15,9 +15,10 @@ elif eval "$(which brew &> /dev/null)"; then
 else
   echo 'Installing brew...'
   bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  brew update
+  brew install coreutils
 fi
 
-brew update
 brew_install bat
 brew_install exercism
 brew_install gh
