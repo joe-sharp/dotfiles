@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 bash 'scripts/install/iterm.sh'
 bash 'scripts/install/antigen.sh'
