@@ -967,13 +967,13 @@ Arrange Split Panes Evenly</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.1626255214214325</real>
+				<real>0.1626255214</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.18308168649673462</real>
+				<real>0.18308168650000001</real>
 				<key>Red Component</key>
-				<real>0.19795888662338257</real>
+				<real>0.19795888659999999</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -1075,12 +1075,16 @@ Arrange Split Panes Evenly</string>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.12647624313831329</real>
+				<real>0.16862604022026062</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.14467915892601013</real>
+				<real>0.19215220212936401</real>
 				<key>Red Component</key>
-				<real>0.15955506265163422</real>
+				<real>0.21176531910896301</real>
 			</dict>
 			<key>Custom Command</key>
 			<string>No</string>
@@ -1423,12 +1427,16 @@ Arrange Split Panes Evenly</string>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.092175714671611786</real>
+				<real>0.68582421540000005</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.078538775444030762</real>
+				<real>0.13352486490000001</real>
 				<key>Red Component</key>
-				<real>0.068749949336051941</real>
+				<real>0.37303274870000003</real>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -1881,13 +1889,13 @@ Arrange Split Panes Evenly</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.15034215335976586</real>
+				<real>0.61568627450000002</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.1487663986947369</real>
+				<real>0.12549019610000001</real>
 				<key>Red Component</key>
-				<real>0.14407365704305075</real>
+				<real>0.3411764706</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -1966,13 +1974,13 @@ Arrange Split Panes Evenly</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.75686275959014893</real>
+				<real>0.97647058819999999</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.75686275959014893</real>
+				<real>0.36470588240000001</real>
 				<key>Red Component</key>
-				<real>0.75686275959014893</real>
+				<real>0.0</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -2376,13 +2384,13 @@ Arrange Split Panes Evenly</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.28820332884788513</real>
+				<real>0.68627450980000004</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.29701736569404602</real>
+				<real>0.1333333333</real>
 				<key>Red Component</key>
-				<real>0.34258317947387695</real>
+				<real>0.37254901959999998</real>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
