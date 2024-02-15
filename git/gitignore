@@ -5,6 +5,12 @@
 rspec_n_iteration.*
 rspec_n-*
 .swp
+gppr
+Gemfile.persona*
+.rdbgrc
+.rdbgrc*
+.irb*
+.pry*
 # Mac OS
 *.DS_Store
 .AppleDouble
