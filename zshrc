@@ -5,6 +5,9 @@ alias w3m='w3m -sixel'
 alias www='w3m'
 alias arst='asdf'
 alias bench='/usr/bin/time -l'
+alias ding='echo -e "\a"'
+alias gin='gein'
+alias gun='geun'
 function colordiff () { diff -u $@ | diff-so-fancy }
 function httpcat() { INPUT=$@ && curl https://http.cat/$INPUT.jpg | imgcat }
 function rubo() { if [ -f Gemfile ]; then bundle exec rubocop $@; else rubocop $@; fi }
@@ -29,14 +32,14 @@ alias gpn='git push --no-verify'
 alias gcob='git checkout -b'
 alias gs='git status'
 alias gsc="$HOME/bin/gsc"
-alias gh='GITHUB_TOKEN=$(/usr/bin/sudo cat ~/.secrets/gh) gh'
+alias gha='sudo cat ~/.secrets/gh | gh auth login --with-token'
 alias ghv='gh pr view'
 alias ghw='gh pr view --web'
 alias ghc='gh pr checks'
 alias ghd='gh pr diff'
 alias ghm='gh pr merge && gl'
 alias ghs='gh pr status'
-function gppr() { if [ -f bin/gppr ]; then bin/gppr; else gh pr create -a joe-sharp; fi }
+function gppr() { if [ -f bin/gppr ]; then bin/gppr; else gh pr create --assignee @me; fi }
 
 ### Docker ###
 alias drm='docker rm'
@@ -72,7 +75,6 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle olets/zsh-abbr
 antigen bundle MichaelAquilina/zsh-you-should-use
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zdharma-continuum/zsh-diff-so-fancy
 if (( ${+TERM_PROGRAM} ));
 then
   antigen theme https://gist.github.com/5b0c67179aa076ff53e7c03c4191eec3 joe-style

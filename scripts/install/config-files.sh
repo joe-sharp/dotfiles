@@ -15,6 +15,7 @@ fi
 
 add_symlink .config/gh       gh
 add_symlink .config/neofetch neofetch
+add_symlink .config/rg       rg
 add_symlink .gitignore       git/gitignore
 add_symlink .pryrc           pryrc
 add_symlink .vim             vim
