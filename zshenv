@@ -7,3 +7,4 @@ export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export PAGER='/usr/bin/less -FX'
 
+export RUBY_DEBUG_IRB_CONSOLE=true
