@@ -43,7 +43,7 @@ function gppr() { if [ -f bin/gppr ]; then bin/gppr; else gh pr create --assigne
 
 ### Docker ###
 alias drm='docker rm'
-alias drma="docker rm $(docker ps -q -f status=exited)"
+alias drma="docker ps -q -f status=exited | xargs docker rm"
 
 ### Exercism ###
 alias e='exercism'
