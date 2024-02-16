@@ -1,8 +1,21 @@
 # frozen_string_literal: true
 
-puts 'Loading ~/.pryrc ...'
-require 'pry-doc'
+puts "Loading #{__FILE__} ..."
 
+require '~/.config/irb/require_gem'
+require_gem 'pry-doc'
+require 'benchmark'
+
+# Run last command with return
+Pry::Commands.command /^$/, "repeat last command" do
+  pry_instance.run_command Pry.history.to_a.last
+end
+
+Pry::Commands.command /^q$/, "quit" do
+  pry_instance.run_command exit
+end
+
+# Convenience Methods
 # include Rails Route/Views helpers
 def iv
   include ActionDispatch::Routing              # for named paths
@@ -20,9 +33,8 @@ def a_hash
 end
 
 def bench(repetitions = 1000, &block)
-  require 'benchmark'
   Benchmark.bm { |b| b.report{ repetitions.times(&block) } }
   nil
 end
 
-puts 'Loaded ~/.pryrc'
+puts "Loaded #{__FILE__}!"

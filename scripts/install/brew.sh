@@ -21,6 +21,7 @@ fi
 
 brew_install bat
 brew_install exercism
+brew_install fzf
 brew_install gh
 brew_install neofetch
 brew_install ripgrep rg
