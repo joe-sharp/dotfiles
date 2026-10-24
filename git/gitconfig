@@ -3,13 +3,21 @@
 	email = joesharp13@gmail.com
 [init]
 	defaultBranch = main
+[alias]
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	assume-unchanged = update-index --assume-unchanged
+	assume-changed = update-index --no-assume-unchanged
+	why = blame
 [core]
 	pager = diff-so-fancy | less -FXRi
-	excludesFile = /Users/joesharp/.gitignore
-	editor = /usr/bin/vim
+	excludesfile = /Users/joesharp/dev/dotfiles/git/gitignore
+[protocol]
+	version = 2
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
-[alias]
-	why = blame
-	unstage = reset HEAD --
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[pull]
+	ff = true

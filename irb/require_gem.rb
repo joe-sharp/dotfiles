@@ -28,12 +28,12 @@ class RequireGem
   def require_gem(gem)
     dir = File.join(gem_dir, latest_version(gem), 'lib')
     $LOAD_PATH << dir
-    puts "Loaded #{dir}"
+    puts "Loaded #{dir}" if ENV['RC_DEBUG']
 
     require gem.to_s
-    puts "Required #{gem}"
+    puts "Required #{gem}" if ENV['RC_DEBUG']
   rescue StandardError => e
-    puts e
+    raise e
   end
 end
 
