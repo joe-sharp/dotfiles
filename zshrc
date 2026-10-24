@@ -4,10 +4,12 @@ alias lll='exa -lhgH'
 alias w3m='w3m -sixel'
 alias www='w3m'
 alias arst='asdf'
+alias next='ASDF_TOOL_VERSIONS_FILENAME=.next-versions'
 alias bench='/usr/bin/time -l'
-alias ding='echo -e "\a"'
+alias ding='afplay /System/Library/Sounds/Glass.aiff'
 alias gin='gein'
 alias gun='geun'
+alias rgnc='/opt/homebrew/bin/rg --no-config'
 function colordiff () { diff -u $@ | diff-so-fancy }
 function httpcat() { INPUT=$@ && curl https://http.cat/$INPUT.jpg | imgcat }
 function rubo() { if [ -f Gemfile ]; then bundle exec rubocop $@; else rubocop $@; fi }
@@ -89,7 +91,7 @@ antigen apply
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 ### ASDF ###
-[ -f ~/.asdf/asdf.sh ] && source ~/.asdf/asdf.sh
+#[ -f ~/.asdf/asdf.sh ] && source ~/.asdf/asdf.sh
 autoload -Uz compinit && compinit
 
 ### FZF ###
@@ -105,6 +107,11 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.config/workrc ] && source ~/.config/workrc
 
 ##### Override Antigen Plugin Aliases #####
+
+### diff ###
+unalias diff
+function diff () { /usr/bin/diff -U 3 $@ }
+
 ### git ###
 alias gba="$HOME/bin/gba"
 alias gstd="$HOME/bin/gstd"

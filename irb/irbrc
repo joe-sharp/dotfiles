@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 return if ENV['irbrc_loaded']
-puts "Loading #{__FILE__} ..."
+
+puts "Loading #{__FILE__} ..." if ENV['RC_DEBUG']
 
 IRB.conf[:EVAL_HISTORY] = 10
 IRB.conf[:COMMAND_ALIASES].merge!({ help: :show_cmds })
@@ -14,48 +15,62 @@ Reline::Face.config(:completion_dialog) do |conf|
 end
 
 require_relative 'require_gem'
-require_gem 'pry'
+# require_gem 'pry'
 require_gem 'yard'
-require_gem 'pry-doc'
-require 'benchmark'
+# require_gem 'pry-doc'
+
+if RUBY_VERSION < '4.0'
+  require 'benchmark'
+else
+  require_gem 'benchmark'
+end
 
 # Convenience Methods:
+module JSharp
+  def self.an_array
+    (1..10).to_a
+  end
 
-def an_array
-  (1..10).to_a
-end
+  def self.a_hash
+    { foo: 'Foo', bar: 'Bar', baz: 'Baz' }
+  end
 
-def a_hash
-  { foo: 'Foo', bar: 'Bar', baz: 'Baz' }
-end
+  def self.bench(repetitions: 1000, &block)
+    Benchmark.bm { |b| b.report { repetitions.times(&block) } }
+    nil
+  end
 
-def bench(repetitions = 1000, &block)
-  Benchmark.bm { |b| b.report { repetitions.times(&block) } }
-  nil
-end
+  # include Rails Route/Views helpers
+  def self.iv
+    include ::ActionDispatch::Routing              # for named paths
+    include ::Rails.application.routes.url_helpers # for named paths
+    include ::ActionView::Helpers::UrlHelper       # for url_for
+    puts 'Loaded Rails Route/View helpers'
+  end
 
-module IRB
-  class << self
-    private def easter_egg_logo(type = 'UNICODE')
-      @easter_egg_location = File.join(RG.gem_dir, RG.latest_version('irb'), 'lib', 'irb')
-      @easter_egg_logos ||= File.read(File.join(@easter_egg_location, 'ruby_logo.aa'), encoding: 'UTF-8:UTF-8')
-          .split(/TYPE: ([A-Z]+)\n/)[1..]
-          .each_slice(2)
-          .to_h
-      RDoc::RI::Driver.new.page do |io|
-        io.write @easter_egg_logos[type.to_s.upcase]
-      end
-    end
+  def self.easter_egg_logo
+    IRB.send(:easter_egg, :logo)
+  end
+
+  def self.easter_egg
+    IRB.send(:easter_egg, :dancing)
   end
 end
 
-# include Rails Route/Views helpers
-def iv
-  include ActionDispatch::Routing              # for named paths
-  include Rails.application.routes.url_helpers # for named paths
-  include ActionView::Helpers::UrlHelper       # for url_for
-  puts 'Loaded Rails Route/View helpers'
-end
+# module IRB
+#   class << self
+#     private def easter_egg_logo(type = 'UNICODE')
+#       @easter_egg_location = File.join(RG.gem_dir, RG.latest_version('irb'), 'lib', 'irb')
+#       @easter_egg_logos ||= File.read(File.join(@easter_egg_location, 'ruby_logo.aa'), encoding: 'UTF-8:UTF-8')
+#           .split(/TYPE: ([A-Z]+)\n/)[1..]
+#           .each_slice(2)
+#           .to_h
+#       RDoc::RI::Driver.new.page do |io|
+#         io.write @easter_egg_logos[type.to_s.upcase]
+#       end
+#     end
+#   end
+# end
 
 ENV['irbrc_loaded'] = 'true'
-puts "Loaded #{__FILE__}!"
+puts "Loaded #{__FILE__}!" if ENV['RC_DEBUG']

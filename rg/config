@@ -1,3 +1,4 @@
 --glob=!.git/*
---glob=!vendor/assets/*
 --glob=!db/*
+--glob=!vendor/assets/*
+--glob=!app/assets/*

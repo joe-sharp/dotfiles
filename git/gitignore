@@ -2,17 +2,27 @@
 *.envbak
 *.idea
 *.sublime-*
+.cursor*
 rspec_n_iteration.*
 rspec_n-*
 .swp
 gppr
 Gemfile.persona*
+config/initializers/jsharp_sidekiq_init_supress.rb
 .rdbgrc
 .rdbgrc*
 .irb*
 .pry*
+# Like .tool-versions for ASDF, use with `next` alias
+.next-versions
 # Mac OS
 *.DS_Store
 .AppleDouble
 .LSOverride
+.vscode
+# AI Tools
+.cursor
+.claude
+.agents
 
+tmp_code_*
